@@ -121,7 +121,7 @@ Feature conjunctions
 
 * Sometimes the baseline features aren't good enough
   (data not linearly separable)
-* Want quadratic features, i.e. products: ``f1f2`` = ``v1`` × ``v2``
+* Want quadratic features, i.e. products: ``f1f2`` = ``v1`` Ã— ``v2``
 * (Products of booleans are logical conjunctions)
 * E.g., product of "query contains 'ir'" and "URL contains 'ilps'"
 
@@ -131,7 +131,7 @@ Feature conjunctions: the expensive way
 ---------------------------------------
 
 * Full expansion of feature space leads to quadratic blowup,
-  ½n × (n-1) = O(n²) memory usage
+  Â½n Ã— (n-1) = O(nÂ²) memory usage
 * Kernels do this faster, but kernel learners scale badly
 * All kinds of algorithms/heuristics proposed
 
