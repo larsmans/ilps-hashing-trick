@@ -1,9 +1,20 @@
-Feature Hashing for Large Scale Multitask Learning
+Feature hashing for large scale multitask learning
 ==================================================
 
-Weinberger, Dasgupta, Langford, Smola, Attenberg (ICML 2009)
+----
 
-Presented at ILPS Reading Group by: Lars Buitinck
+Feature hashing
+---------------
+
+* Weinberger, Dasgupta, Langford, Smola and Attenberg (2009).
+  `Feature Hashing for Large Scale Multitask Learning
+  <http://alex.smola.org/papers/2009/Weinbergeretal09.pdf>`_. ICML.
+* Ganchev and Dredze (2008).
+  `Small statistical models by random feature mixing
+  <http://www.cs.jhu.edu/~mdredze/publications/mobile_nlp_feature_mixing.pdf>`_.
+  ACL HLT Workshop on Mobile Language Processing.
+
+Presented at ILPS Reading Group by Lars Buitinck
 
 ----
 
@@ -135,15 +146,17 @@ Hashing for multitask learning
 
 ----
 
+Try it out
+----------
+
+* `Vowpal Wabbit <http://hunch.net/~vw/>`_
+* `Sofia ML <https://code.google.com/p/sofia-ml/>`_
+* `scikit-learn <http://scikit-learn.org/stable/modules/feature_extraction.html#feature-hashing>`_
+
+----
+
 That's it for now
 -----------------
 
-* Weinberger, Dasgupta, Langford, Smola and Attenberg (2009).
-  `Feature Hashing for Large Scale Multitask Learning
-  <http://alex.smola.org/papers/2009/Weinbergeretal09.pdf>`_. ICML.
-* Ganchev and Dredze (2008).
-  `Small statistical models by random feature mixing
-  <http://www.cs.jhu.edu/~mdredze/publications/mobile_nlp_feature_mixing.pdf>`_.
-  ACL HLT Workshop on Mobile Language Processing.
 
 * Questions?
