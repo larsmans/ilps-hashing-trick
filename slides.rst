@@ -71,10 +71,11 @@ Problems
 -------------------
 
 * Idea: hash the strings into the indices directly: O(1) memory
-* The column index of a feature ``f`` is ``h(f) mod n``
+* Fix some arbitrary vector length :math:`n`
+* The column index of a feature :math:`f` is :math:`h(f) mod n`
 * In case of collision, add values (or OR them)
 * Ganchev and Dredze (2008) showed this to work well (picture),
-  but collisions increase with decreasing ``n``
+  but collisions increase with decreasing :math:`n`
 
 .. image:: ganchev-dredze.png
 
@@ -121,10 +122,12 @@ Properties
 * Expected value in each column is zero, so data is *centered* for free
 * With boolean input, Gaussian-like output
 * This is what many other learning algorithms want
-* Let :math:`\phi_{h,\xi}(x)` be the vector produced for :math:`x`
+* Let :math:`\phi(x)` be the vector produced for :math:`x`
+  by our hashing vectorizer
 * Works like a kernel :math:`K(x,x') = \phi(x) \cdot \phi(x')`
   with :math:`E[\phi(x) \cdot \phi(x')] = x \cdot x'`
-  (expectation over the function :math:`\phi_{h, \xi}`)
+  (expectation over the function :math:`\phi`,
+  i.e. over :math:`h, \xi`)
 * Can store weight vectors of classifier as a sparse table
 
 ----
@@ -135,8 +138,7 @@ Multitask learning
 * Global spam filter + personalized filter
 * Massively multiclass classification
 * Hash not ``f``, but ``(T, f)`` for task ``T``
-* So ``(qf, df)`` for all query (document) features ``qf`` (``df``)
-* Or ``(user_id, term)`` for personalized spam filter
+* So ``(user_id, term)`` for personalized spam filter
 * Single parameter vector for all tasks
   to achieve :math:`f(x) = w \cdot (\phi(x) + \phi(x, T))`
 
@@ -146,7 +148,7 @@ Further reading
 ---------------
 * Bai, Weston, Grangier, Collobert, Chapelle and Weinberger (2009),
   Supervised semantic indexing, CIKM. Describe extension to L2R.
-* Shi, Petterson, Dror, Langford, Somla and Vishwanathan (2009),
+* Shi, Petterson, Dror, Langford, Smola and Vishwanathan (2009),
   Hash kernels for structured data, JMLR.
   Application to structured prediction.
 
