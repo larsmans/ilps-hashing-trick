@@ -59,11 +59,11 @@ Problems
 --------
 
 * Dictionary size = vocabulary size
+* Specialized string tables (tries, automata) help, but still linear memory use
 * In true online settings, feature set keeps growing
 * Sometimes intentionally:
   when spam filter has learned high weight for "v1agra",
   spammers invent new misspellings, exploit Unicode, etc.
-* Specialized string tables (tries, automata) help, but still linear memory use
 
 ----
 
