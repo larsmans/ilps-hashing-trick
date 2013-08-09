@@ -114,8 +114,8 @@ Second hash function's purpose
 
 ----
 
-It gets better
---------------
+Properties
+----------
 
 * Expected value in each column is zero, so data is *centered* for free
 * With boolean input, Gaussian-like output
@@ -132,19 +132,18 @@ Multitask learning
 
 * Global spam filter + personalized filter
 * Massively multiclass classification
-* L2R (?): per query-term ranking
-
-----
-
-Hashing for multitask learning
-------------------------------
-
 * Hash not ``f``, but ``(T, f)`` for task ``T``
 * So ``(qf, df)`` for all query (document) features ``qf`` (``df``)
 * Or ``(user_id, term)`` for personalized spam filter
 * Single parameter vector for all tasks
   to achieve :math:`f(x) = w \cdot (\phi(x) + \phi(x, T))`
-* (Can similarly hash pairs of :math:`x` to get quadratic kernel)
+
+----
+
+Further reading
+---------------
+* Bai, Weston, Grangier, Collobert, Chapelle and Weinberger (2009),
+  Supervised semantic indexing, CIKM. Describe extension to L2R.
 
 ----
 
