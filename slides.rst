@@ -72,7 +72,7 @@ Problems
 
 * Idea: hash the strings into the indices directly: O(1) memory
 * Fix some arbitrary vector length :math:`n`
-* The column index of a feature :math:`f` is :math:`h(f) mod n`
+* The column index of a feature :math:`f` is ``h(f) mod n``
 * In case of collision, add values (or OR them)
 * Ganchev and Dredze (2008) showed this to work well (picture),
   but collisions increase with decreasing :math:`n`
