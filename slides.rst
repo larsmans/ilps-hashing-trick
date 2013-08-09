@@ -83,7 +83,8 @@ Problems
 Second hash function
 --------------------
 
-* For very large problems, collisions matter, so solve that
+* For very large (online) problems, collisions matter
+* Solution of Weinberger et al.:
 * Let ``ξ`` be a hash function with range {-1, 1}
 * Feature to set is still ``h(f) mod n``,
   but multiply its value by ``ξ(f)``:
@@ -120,9 +121,10 @@ Properties
 * Expected value in each column is zero, so data is *centered* for free
 * With boolean input, Gaussian-like output
 * This is what many other learning algorithms want
+* Let :math:`\phi_{h,\xi}(x)` be the vector produced for :math:`x`
 * Works like a kernel :math:`K(x,x') = \phi(x) \cdot \phi(x')`
   with :math:`E[\phi(x) \cdot \phi(x')] = x \cdot x'`
-  (expectation over the hash function :math:`\phi`)
+  (expectation over the function :math:`\phi_{h, \xi}`)
 * Can store weight vectors of classifier as a sparse table
 
 ----
@@ -144,11 +146,14 @@ Further reading
 ---------------
 * Bai, Weston, Grangier, Collobert, Chapelle and Weinberger (2009),
   Supervised semantic indexing, CIKM. Describe extension to L2R.
+* Shi, Petterson, Dror, Langford, Somla and Vishwanathan (2009),
+  Hash kernels for structured data, JMLR.
+  Application to structured prediction.
 
 ----
 
-Try it out
-----------
+Implementations
+---------------
 
 * `Vowpal Wabbit <http://hunch.net/~vw/>`_
 * `Sofia ML <https://code.google.com/p/sofia-ml/>`_
@@ -156,8 +161,7 @@ Try it out
 
 ----
 
-That's it for now
------------------
-
+That's it
+---------
 
 * Questions?
