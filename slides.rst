@@ -18,11 +18,12 @@ Presented at ILPS Reading Group by Lars Buitinck
 
 ----
 
-Machine learning with symbolic features
----------------------------------------
+Symbolic features
+-----------------
 
 * Learning algorithms formulated on vectors/matrices:
   :math:`w \cdot x > 0`
+* Also true for cosine similarity etc.
 * NLP/IR applications: text
 * Features are initially strings
 * Need to **vectorize**: "buy v1agra now!" → (0, 0, 1, 0, 1, 1, 0, 1)
@@ -49,7 +50,8 @@ Vectorizing
 .. sourcecode:: python
 
     for f, v in sample:
-        vector[feature_to_index[f]] = v
+        if f in feature_to_index:
+            vector[feature_to_index[f]] = v
 
 ----
 
@@ -119,7 +121,7 @@ It gets better
 * With boolean input, Gaussian-like output
 * This is what many other learning algorithms want
 * Works like a kernel :math:`K(x,x') = \phi(x) \cdot \phi(x')`
-  with :math:`\mathbb{E}[\phi(x) \cdot \phi(x')] = x \cdot x'`
+  with :math:`E[\phi(x) \cdot \phi(x')] = x \cdot x'`
   (expectation over the hash function :math:`\phi`)
 * Can store weight vectors of classifier as a sparse table
 
