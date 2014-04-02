@@ -3,7 +3,7 @@
 # Write a directory to the Git index.
 # Prints the directory's SHA-1 to stdout.
 #
-# Copyright 2013 Lars Buitinck.
+# Copyright 2013 Lars Buitinck / University of Amsterdam.
 # License: MIT (http://opensource.org/licenses/MIT)
 
 import os
